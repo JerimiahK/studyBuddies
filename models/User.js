@@ -31,6 +31,7 @@ User.int(
       },
     },
   },
+
   {
     sequelize,
     freezeTableName: true,
@@ -39,3 +40,10 @@ User.int(
   }
   //Hooks before and after create for hashing password with bcrypt
 );
+
+//  hooks: {
+//       async beforeCreate(newUserData) {
+//         newUserData.password = await bcrypt.hash(newUserData.password, 10);
+//         return newUserData;
+//       },
+//     },
