@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class User extends Model {}
 
-User.int(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -36,7 +36,7 @@ User.int(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "dish",
+    modelName: "user",
   }
   //Hooks before and after create for hashing password with bcrypt
 );
@@ -47,3 +47,4 @@ User.int(
 //         return newUserData;
 //       },
 //     },
+module.exports = User;

@@ -4,7 +4,7 @@ const router = require("express").Router();
 // Requiring in routes
 const apiRoutes = require("./api");
 // const homeRoutes = require(""); // set up home routes later
-const userRoutes = require("./user-routes.js");
+const userRoutes = require("./api/user-routes");
 
 // Route prefixes
 router.use("/", userRoutes);

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const User = require("../../models/User");
 
 // Create New User
 router.post("/", async (req, res) => {
@@ -10,10 +10,10 @@ router.post("/", async (req, res) => {
       password: req.body.password,
     });
 
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      res.status(200).json(newUser);
-    });
+    // req.session.save(() => {
+    //   req.session.loggedIn = true;
+    // });
+    res.status(200).json(newUser);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -22,3 +22,5 @@ router.post("/", async (req, res) => {
 // router.post for Login
 
 // router.post for Logout
+
+module.exports = router;
