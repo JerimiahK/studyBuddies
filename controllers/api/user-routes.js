@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const User = require("../../models/User");
 const { json } = require("sequelize");
-const User = require("../../models/User");
 
 // http://localhost:3001/api/users
 // Get all Users
