@@ -9,7 +9,11 @@ router.get("/", async (req, res) => {
     const categoryData = await Category.findAll({
       include: [{ model: Subtopic }],
     });
-    res.status(200).json(categoryData);
+    const categories = categoryData.map((category) =>
+      category.get({ plain: true })
+    );
+    console.log(categories);
+    res.status(200).json(categories);
   } catch (err) {
     res.status(500).json(err);
   }
