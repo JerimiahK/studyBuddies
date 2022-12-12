@@ -1,6 +1,7 @@
 // Categories Routes
 const router = require("express").Router();
-const { Category, Subtopic } = require("../../models");
+const Category = require("../../models/Categories");
+const Subtopic = require("../../models/Subtopics");
 
 // http:localhost:3001/api/categories
 //GET
