@@ -47,3 +47,21 @@ router.put("/:id", async (req, res) => {
 
 // http:localhost:3001/api/categories/:id
 //DELETE
+router.delete("/:id", async (req, res) => {
+  try {
+    const categoryData = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!categoryData) {
+      res.status(404).json({ message: "No category with that ID exists!" });
+      return;
+    }
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+module.exports = router;
