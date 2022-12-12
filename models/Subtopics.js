@@ -28,10 +28,11 @@ const sequelize = require("../config/connection");
 //     },
 //     demo_code: {
 //       type: DataTypes.STRING,
-//       allowNull: false,
+//       allowNull: true,
 //     },
 //     resources: {
 //       type: DataTypes.STRING,
+//       allowNull: true,
 //     },
 //   },
 //   {
