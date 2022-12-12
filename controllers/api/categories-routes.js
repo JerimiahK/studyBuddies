@@ -15,11 +15,35 @@ router.get("/", async (req, res) => {
   }
 });
 
-// http:localhost:3001/api/categories/:id
+// http:localhost:3001/api/categories
 //POST
-router.post("/:id", (req, res) => {});
+router.post("/", async (req, res) => {
+  try {
+    const newCategory = await Category.create(req.body);
+    res.status(200).json(newCategory);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // http:localhost:3001/api/categories/
 //PUT
+router.put("/:id", async (req, res) => {
+  try {
+    const categoryUpdate = await Category.update(
+      {
+        category_name: req.body.category_name,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(categoryUpdate);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // http:localhost:3001/api/categories/:id
 //DELETE
