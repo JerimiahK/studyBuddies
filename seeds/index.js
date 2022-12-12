@@ -3,6 +3,8 @@ const seedUsers = require("./userSeeds.js");
 const seedTopics = require("./topicSeeds.js");
 const seedSubtopic = require("./subtopicSeeds.js");
 const seedCategory = require("./categorySeeds.js");
+console.log(seedCategory);
+console.log(seedSubtopic);
 
 // const seedDatabase = async () => {
 //   await sequelize.sync({ force: true });
@@ -21,8 +23,10 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
 
   await seedUsers();
+  await seedCategory();
   await seedTopics();
   await seedSubtopic();
-  await seedCategory();
+
+  process.exit(0);
 };
 seedAll();

@@ -1,15 +1,13 @@
 // Categories Routes
 const router = require("express").Router();
 const Category = require("../../models/Categories");
-const Subtopic = require("../../models/Subtopics");
+const { json } = require("sequelize");
 
 // http:localhost:3001/api/categories
 //GET
 router.get("/", async (req, res) => {
   try {
-    const categoryData = await Category.findAll({
-      include: [{ model: Subtopic }],
-    });
+    const categoryData = await Category.findAll();
     const categories = categoryData.map((category) =>
       category.get({ plain: true })
     );
