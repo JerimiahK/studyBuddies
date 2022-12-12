@@ -1,19 +1,28 @@
 const sequelize = require("../config/connection");
-const User = require("../models/User");
-const userData = require("./userSeeds.json");
-// const topicData = require("./topicSeeds.json");
-// const subtopicData = require("./subtopicSeeds.json");
-// const categoryData = require("./categorySeeds.json");
+const seedUsers = require("./userSeeds.js");
+const seedTopics = require("./topicSeeds.js");
+const seedSubtopic = require("./subtopicSeeds.js");
+const seedCategory = require("./categorySeeds.js");
 
-const seedDatabase = async () => {
+// const seedDatabase = async () => {
+//   await sequelize.sync({ force: true });
+
+//   await User.bulkCreate(userData, {
+//     individualHooks: true,
+//     returning: true,
+//   });
+
+//   process.exit(0);
+// };
+
+// seedDatabase();
+
+const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  process.exit(0);
+  await seedUsers();
+  await seedTopics();
+  await seedSubtopic();
+  await seedCategory();
 };
-
-seedDatabase();
+seedAll();
