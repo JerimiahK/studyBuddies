@@ -1,13 +1,18 @@
 const router = require("express").Router();
 const User = require("../../models/User");
-const { json } = require("sequelize");
+// const { json } = require("sequelize");
 
 // http://localhost:3001/api/users
 // Get all Users
 router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll();
-    const users = userData.map((user) => user.get({ plain: true }));
+    const users = userData.map((user) =>
+      user.get({
+        plain: true,
+        individualHooks: true,
+      })
+    );
     console.log(users);
     res.status(200).json(users);
   } catch (err) {
