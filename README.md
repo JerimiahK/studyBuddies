@@ -24,7 +24,7 @@ Below is the following installing steps to install and run this app.
 1. Clone this repo
 
 ```sh
-git clone git@github.com:T3mpz/Employee-Tracker-.git
+git clone git@github.com:JerimiahK/studyBuddies.git
 ```
 
 2. Install NPM packages/dependencies
@@ -49,7 +49,15 @@ npm run watch
 
 ```
 Insomnia routes are commented in each route file.
-``` -->
+``` 
+
+6. View study application via :
+```
+http://localhost:3001....
+```
+
+-->
+
 
 ---
 

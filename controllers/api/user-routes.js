@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { json } = require("sequelize");
 const User = require("../../models/User");
+const { json } = require("sequelize");
 
 // http://localhost:3001/api/users
 // Get all Users
@@ -24,11 +24,10 @@ router.post("/", async (req, res) => {
       password: req.body.password,
     });
 
-    res.status(200).json(newUser);
     // req.session.save(() => {
     //   req.session.loggedIn = true;
-    //   res.status(200).json(newUser);
     // });
+    res.status(200).json(newUser);
   } catch (err) {
     res.status(500).json(err);
   }
