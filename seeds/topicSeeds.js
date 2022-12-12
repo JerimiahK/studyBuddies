@@ -1,20 +1,17 @@
-const { Topics } = require("../models");
+const Topics = require("../models/Topics");
 
 const topicData = [
   {
-    "topic_name": "Javascript",
-    "category_id": "",
+    topic_name: "Javascript",
   },
   {
-    "topic_name": "HTML",
-    "category_id": "",
+    topic_name: "HTML",
   },
   {
-    "topic_name": "CSS",
-    "category_id": "",
+    topic_name: "CSS",
   },
 ];
 
 const seedTopics = () => Topics.bulkCreate(topicData);
 
-module.export = seedTopics;
+module.exports = seedTopics;
