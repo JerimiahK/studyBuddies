@@ -7,7 +7,7 @@ const subtopicRoutes = require("./subtopics-routes");
 
 router.use("/users", userRoutes);
 router.use("/topics", topicRoutes);
-router.use("/categoeries", categoryRoutes);
+router.use("/categories", categoryRoutes);
 router.use("/subtopics", subtopicRoutes);
 
 module.exports = router;
