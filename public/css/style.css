@@ -1,0 +1,51 @@
+:root {
+  --neonMagenta: rgb(177, 35, 177);
+  --neonYellow: rgb(255, 255, 115);
+  --neonBlue: rgb(35, 249, 231);
+  --neonPurple: rgb(170, 26, 183);
+  --white: white;
+  --black: --black;
+  --dark: rgb(43, 42, 42);
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  background-color: var(--neonMagenta);
+  color: var(--white);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  background-color: var(--neonMagenta);
+  color: var(--white);
+  margin-top: 10px;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.btn-favorites {
+  display: flex;
+}
+
+.bi-star {
+  display: flex;
+  margin-top: -5px;
+}
+
+.bi-star:hover {
+  color: var(--neonYellow);
+}
+
+.card:hover {
+  cursor: pointer;
+}
