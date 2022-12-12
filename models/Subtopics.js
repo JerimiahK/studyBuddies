@@ -34,6 +34,13 @@ Subtopic.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    topic_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "topic",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,

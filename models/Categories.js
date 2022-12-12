@@ -19,13 +19,13 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    subtopic_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "subtopic",
-        key: "id",
-      },
-    },
+    // subtopic_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "subtopic",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
