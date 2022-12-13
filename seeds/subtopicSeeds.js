@@ -7,6 +7,7 @@ const subtopicData = [
     demo_code: "This is where code demos will go for the subtopic",
     resources:
       "This is where any resources (links, docs, etc) with go for the subtopic.",
+    topic_id: 1,
   },
 ];
 
