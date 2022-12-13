@@ -13,7 +13,6 @@ router.get("/", async (req, res) => {
         individualHooks: true,
       })
     );
-    console.log(users);
     res.status(200).json(users);
   } catch (err) {
     res.status(500).json(err);
@@ -79,6 +78,7 @@ router.post("/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // router.post for Logout
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
@@ -89,4 +89,5 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
+
 module.exports = router;
