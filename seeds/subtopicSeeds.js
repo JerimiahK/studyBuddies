@@ -166,12 +166,8 @@ const subtopicData = [
       "var myString = “Hello world!”;localStorage.setItem(message, myString); Local storage will now read: message | “Hello world!” The message key is now paired with the “Hello world!” string var myStorage = localStorage.getItem(message);console.log(message); Console log://Hello world!",
     ],
     demo_code: "This is where code demos will go for the subtopic",
-    resources: [
-      "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
-      "https://www.w3schools.com/jsref/prop_win_localstorage.asp",
-      "https://blog.logrocket.com/localstorage-javascript-complete-guide/",
-    ],
-    // topic_id : , ??
+    resources:
+      "This is where any resources (links, docs, etc) with go for the subtopic.",
   },
 ];
 

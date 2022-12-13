@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
   try {
     const topicsData = await Topics.create({
       topic_name: req.body.topic_name,
-      // category_id: req.body.category_id,
+      category_id: req.body.category_id,
     });
     res.status(200).json(topicsData);
   } catch (err) {
@@ -37,7 +37,7 @@ router.post("/", async (req, res) => {
 });
 // http:localhost:3001/api/topics/
 //PUT
-router.put("/", async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
     const topicsData = await Topics.update(req.body, {
       where: {
@@ -56,7 +56,7 @@ router.put("/", async (req, res) => {
 //DELETE
 router.delete("/:id", async (req, res) => {
   try {
-    const topicsData = await topicsData.destroy({
+    const topicsData = await Topics.destroy({
       where: {
         id: req.params.id,
       },
