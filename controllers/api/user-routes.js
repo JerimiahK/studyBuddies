@@ -13,7 +13,6 @@ router.get("/", async (req, res) => {
         individualHooks: true,
       })
     );
-    console.log(users);
     res.status(200).json(users);
   } catch (err) {
     res.status(500).json(err);
