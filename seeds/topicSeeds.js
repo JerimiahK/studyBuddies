@@ -5,7 +5,7 @@ const topicData = [
     topic_name: "Javascript",
   },
   {
-    topic_name: "HTML",
+    topic_name: "Web API's",
   },
   {
     topic_name: "CSS",

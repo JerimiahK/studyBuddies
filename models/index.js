@@ -1,14 +1,14 @@
 const Categories = require("./Categories");
-const Subtopics = require("./Subtopics");
 const Topics = require("./Topics");
-
-// Topics belongs to Categories via the 'category_id' foreign key.
-Topics.belongsTo(Categories, {
-  foreignKey: "category_id",
-});
+const Subtopics = require("./Subtopics");
 
 // Categories has many Topics via the 'category_id' foreign key.
 Categories.hasMany(Topics, {
+  foreignKey: "category_id",
+});
+
+// Topics belongs to Categories via the 'category_id' foreign key.
+Topics.belongsTo(Categories, {
   foreignKey: "category_id",
 });
 
@@ -21,3 +21,9 @@ Subtopics.belongsTo(Topics, {
 Topics.hasMany(Subtopics, {
   foreignKey: "topic_id",
 });
+
+module.exports = {
+  Categories,
+  Topics,
+  Subtopics,
+};
