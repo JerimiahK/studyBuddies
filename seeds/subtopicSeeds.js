@@ -19,7 +19,6 @@ const subtopicData = [
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const",
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let",
     ],
-    // topic_id : , ??
   },
   // Arrays
   {
