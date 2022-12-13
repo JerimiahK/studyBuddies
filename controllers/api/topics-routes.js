@@ -1,17 +1,16 @@
 // Topics Routes
 const router = require("express").Router();
-const Topics = require("../../models/Topics");
-const Category = require("../../models/Categories");
+const { Topics, Categories } = require("../../models");
 
 // http:localhost:3001/api/topics
 //GET
 router.get("/", async (req, res) => {
   try {
     const topicsData = await Topics.findAll({
-      include: [{ model: Category }],
+      include: [{ model: Categories }],
     });
-    const topics = topicsData.map((topic) => topic.get({ plain: true }));
-    res.status(200).json(topics);
+    // const topics = topicsData.map((topic) => topic.get({ plain: true }));
+    res.status(200).json(topicsData);
 
     // Renders the subtopic.handlebars
     // res.render("subtopics", {
