@@ -28,6 +28,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const subtopicsData = await Subtopics.create({
+      subtopic_name: req.body.subtopic_name,
       description: req.body.description,
       code_examples: req.body.code_examples,
       demo_code: req.body.demo_code,
@@ -40,7 +41,7 @@ router.post("/", async (req, res) => {
 });
 // http:localhost:3001/api/subtopics/
 //PUT
-router.put("/", async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
     const subtopicsData = await Subtopics.update(req.body, {
       where: {
