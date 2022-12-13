@@ -6,6 +6,7 @@ const categoryData = [
   },
   {
     category_name: "Back-end",
+    
   },
 ];
 

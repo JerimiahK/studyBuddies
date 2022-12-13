@@ -19,11 +19,12 @@ Subtopic.init(
       autoIncrement: true,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT("long"),
+      // type: DataTypes.STRING,
       allowNull: false,
     },
     code_examples: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSON,
       allowNull: false,
     },
     demo_code: {
@@ -31,7 +32,8 @@ Subtopic.init(
       allowNull: true,
     },
     resources: {
-      type: DataTypes.STRING,
+      // DataTypes.JSON
+      type: DataTypes.JSON,
       allowNull: true,
     },
     topic_id: {
