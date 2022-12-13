@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 :root {
   --neonMagenta: rgb(177, 35, 177);
@@ -27,42 +28,52 @@
   align-content: center;
   justify-content: space-between;
   background-color: var(--darker);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.1rem;
+  font-family:'Pacifico', 'Arial Narrow', Arial, sans-serif;
   color: var(--neonBlue);
   position: sticky;
   top:0px
 }
 
-
-.test {
-  display: flex;
-  margin-top: 10px;
-  height: 50%;
-  color: var(--dark) ;
-  background-color: var(--neonBlue);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.2rem;
-  
+.heading{
+  font-size: 2.2rem;
 }
 
-/* .test:hover{
+
+.dropbox {
+  display: flex;
+  margin-top: -1.5vh;
+  height: 75%;
+  color: var(--neonBlue) ;
+  /* background-color: var(--neonBlue); */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  
+}
+.bi-list-stars{
+
+}
+.dropbox:hover{
   cursor: pointer;
-  background-color: whitesmoke;
-  color: black;
- box-shadow: 0 0 0 5px white;
-} */
+  height: 110%;
+  background: rgb(92,225,230);
+background: linear-gradient(18deg, rgba(92,225,230,1) 16%, rgba(143,171,230,1) 47%, rgba(203,108,230,1) 80%);
+  color: var(--dark);
+ box-shadow: 0 0 0 3px white;
+}
 
 .footer {
   display: flex;
+  opacity: 90%;
+  font-family: cursive;
+  font-weight: bolder;
   position: fixed;
   bottom: 0px;
   width: 100%;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
-  background-color: var(--neonMagenta);
-  color: var(--white);
+  background-color: var(--darker);
+  color: var(--neonBlue);
   margin-top: 10px;
 }
 
@@ -77,8 +88,10 @@ cursor: pointer;
 }
 #logo{
   display: flex;
-  max-width: 15vh;
-  max-height: 15vh;
+  max-width: 12vh;
+  max-height: 10vh;
+  padding: 1.5vh;
+
 }
 .btn-favorites {
   display: flex;
