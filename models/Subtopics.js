@@ -18,6 +18,10 @@ Subtopic.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    subtopic_name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     description: {
       type: DataTypes.TEXT("long"),
       // type: DataTypes.STRING,
