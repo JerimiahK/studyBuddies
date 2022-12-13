@@ -6,12 +6,12 @@ const topicData = [
     category_id: 1,
   },
   {
-    topic_name: "Web API's",
-    category_id: 2,
-  },
-  {
     topic_name: "CSS",
     category_id: 1,
+  },
+  {
+    topic_name: "Web API's",
+    category_id: 2,
   },
 ];
 

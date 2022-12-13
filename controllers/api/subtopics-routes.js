@@ -1,12 +1,14 @@
 // Subtopics Routes
 const router = require("express").Router();
-const Subtopics = require("../../models/Subtopics");
+const { Subtopics, Topics } = require("../../models/");
 
 // http:localhost:3001/api/subtopics
 //GET
 router.get("/", async (req, res) => {
   try {
-    const subtopicsData = await Subtopics.findAll({});
+    const subtopicsData = await Subtopics.findAll({
+      include: [{ model: Topics }],
+    });
 
     // const subtopics = subtopicsData.map((subtopic) => subtopic.get({ plain: true }));
     res.status(200).json(subtopicsData);
@@ -55,7 +57,7 @@ router.put("/", async (req, res) => {
 //DELETE
 router.delete("/:id", async (req, res) => {
   try {
-    const subtopicsData = await subtopicsData.destroy({
+    const subtopicsData = await Subtopics.destroy({
       where: {
         id: req.params.id,
       },

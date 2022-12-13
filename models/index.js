@@ -12,13 +12,13 @@ Topics.belongsTo(Categories, {
   foreignKey: "category_id",
 });
 
-// Subtopics belongs to Topics via the 'topic_id' foreign key.
-Subtopics.belongsTo(Topics, {
+// Topics has many Subtopics via the 'topic_id' foreign key.
+Topics.hasMany(Subtopics, {
   foreignKey: "topic_id",
 });
 
-// Topics has many Subtopics via the 'topic_id' foreign key.
-Topics.hasMany(Subtopics, {
+// Subtopics belongs to Topics via the 'topic_id' foreign key.
+Subtopics.belongsTo(Topics, {
   foreignKey: "topic_id",
 });
 
