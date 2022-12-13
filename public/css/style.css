@@ -1,23 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
 :root {
   --neonMagenta: rgb(177, 35, 177);
+  --neonRed: rgb(240, 22, 80);
   --neonYellow: rgb(255, 255, 115);
   --neonBlue: rgb(35, 249, 231);
   --neonPurple: rgb(170, 26, 183);
   --white: white;
-  --black: --black;
-  --dark: rgb(43, 42, 42);
+  --dark: rgb(55, 52, 52);
+  --darker: rgba(0, 0, 0, 0.5)
+}
+
+
+
+.Body {
+  background-color: var(--dark);
+ 
 }
 .header {
   display: flex;
+  justify-content: center;
+  opacity: 90%;
+  z-index: 500;
+
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
-  background-color: var(--neonMagenta);
-  color: var(--white);
+  background-color: var(--darker);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1rem;
+  color: var(--neonBlue);
+  position: sticky;
+  top:0px
 }
 
+.test {
+  display: flex;
+  margin-top: 10px;
+  height: 50%;
+  color: var(--dark) ;
+  background-color: var(--neonBlue);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2rem;
+  
+}
+
+/* .test:hover{
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: black;
+ box-shadow: 0 0 0 5px white;
+} */
 .footer {
   display: flex;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
@@ -32,7 +70,14 @@
   align-content: center;
   justify-content: space-between;
 }
-
+.col:hover{
+cursor: pointer;
+}
+#logo{
+  display: flex;
+  max-width: 10vh;
+  max-height: 10vh;
+}
 .btn-favorites {
   display: flex;
 }
