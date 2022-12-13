@@ -8,9 +8,7 @@ const { json } = require("sequelize");
 router.get("/", async (req, res) => {
   try {
     const categoryData = await Category.findAll();
-    const categories = categoryData.map((category) =>
-      category.get({ plain: true })
-    );
+    const categories = categoryData.map((category) => category.get({ plain: true }));
     console.log(categories);
     res.status(200).json(categories);
   } catch (err) {
