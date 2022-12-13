@@ -3,8 +3,6 @@ const seedUsers = require("./userSeeds.js");
 const seedTopics = require("./topicSeeds.js");
 const seedSubtopic = require("./subtopicSeeds.js");
 const seedCategory = require("./categorySeeds.js");
-console.log(seedCategory);
-console.log(seedSubtopic);
 
 // const seedDatabase = async () => {
 //   await sequelize.sync({ force: true });
