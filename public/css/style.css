@@ -14,6 +14,7 @@
 
 .body {
   background-color: var(--dark);
+  position: relative;
 }
 
 .header {
@@ -80,8 +81,8 @@
 }
 #logo {
   display: flex;
-  max-width: 12vh;
-  max-height: 10vh;
+  width: 5.5rem;
+  height: 4.5rem;
   padding: 1.5vh;
 }
 .btn-favorites {
@@ -125,4 +126,30 @@ main {
 
 .cardHeader {
   color: var(--neonMagenta);
+}
+
+.carousel{
+  position: absolute;
+  opacity: 60%;
+  filter: blur(2px);
+
+}
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+}
+#footlogo {
+  max-height: 5vh;
+  max-width: 5vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-body {
+    max-width: 100%;
+    margin-inline: 5%
+  }
+
+  main {
+    margin-block: 4%;
+  }
 }

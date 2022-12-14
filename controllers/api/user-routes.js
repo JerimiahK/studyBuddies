@@ -23,10 +23,10 @@ router.get("/", async (req, res) => {
 // http://localhost:3001/api/user/login
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  // if (req.session.logged_in) {
-  //   res.redirect("/home");
-  //   return;
-  // }
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
 
   res.render("login");
 });
@@ -35,10 +35,10 @@ router.get("/login", (req, res) => {
 // http://localhost:3001/api/user/sign-up
 router.get("/sign-up", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  // if (req.session.logged_in) {
-  //   res.redirect("/home");
-  //   return;
-  // }
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
 
   res.render("sign-up");
 });
@@ -54,6 +54,11 @@ router.post("/", async (req, res) => {
 
       res.status(200).json(userData);
     });
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+    });
+    res.status(200).json(newUser);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -98,7 +103,6 @@ router.post("/login", async (req, res) => {
         .json({ user: userData, message: "You are now logged in!" });
     });
   } catch (err) {
-    // console.log(err);
     res.status(500).json(err);
   }
 });
