@@ -10,10 +10,6 @@ router.get("/", async (req, res) => {
       include: [{ model: Categories }],
     });
     const topics = topicsData.map((topic) => topic.get({ plain: true }));
-    // Renders the homepage.handlebars
-    res.render("homepage", {
-      topics,
-    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
