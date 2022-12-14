@@ -1,17 +1,17 @@
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const userName = $("#user-name").val();
+  const user_name = $("#user-name").val();
   const email = $("#email-address").val();
   const password = $("#password").val();
-  console.log(userName);
+  console.log(user_name);
   console.log(email);
   console.log(password);
 
-  if (userName && email && password) {
-    const response = await fetch("/api/users/sign-up", {
+  if (user_name && email && password) {
+    const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify({ userName, email, password }),
+      body: JSON.stringify({ user_name, email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -23,4 +23,4 @@ const signupFormHandler = async (event) => {
   }
 };
 
-$("#sign_up-form").on("submit", signupFormHandler);
+$("#signup-form").on("submit", signupFormHandler);
