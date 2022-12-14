@@ -13,8 +13,7 @@
 }
 
 .body {
-  background-color: var(--dark);
-  position: relative;
+  background-color: rgb(67, 63, 63);
 }
 
 .header {
@@ -130,9 +129,9 @@ main {
 
 .carousel{
   position: absolute;
-  opacity: 60%;
+  opacity: 40%;
   filter: blur(2px);
-
+  z-index: -1;
 }
 .carousel-item img{
   width: 100%;
