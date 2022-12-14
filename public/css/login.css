@@ -1,63 +1,63 @@
 :root {
-    --neonMagenta: rgb(177, 35, 177);
-    --neonYellow: rgb(255, 255, 115);
-    --neonBlue: rgb(35, 249, 231);
-    --neonPurple: rgb(170, 26, 183);
-    --white: white;
-    --black: --black;
-    --dark: rgb(43, 42, 42);
-  }
+  --neonMagenta: rgb(177, 35, 177);
+  --neonYellow: rgb(255, 255, 115);
+  --neonBlue: rgb(35, 249, 231);
+  --neonPurple: rgb(170, 26, 183);
+  --white: white;
+  --black: --black;
+  --dark: rgb(43, 42, 42);
+}
 
 .body {
-    background-color: var(--dark);
+  background-color: var(--dark);
 }
 
 .login-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
 }
 .form-group {
-    margin-top: 3vh;
+  margin-top: 3vh;
 }
 
 .form-text-box {
-    width: 40vh;
+  width: 40vh;
 }
 
 h2 {
-    padding-top: 5vh;
-    justify-content: center;
+  padding-top: 5vh;
+  justify-content: center;
 }
 
 .submitBtn {
-    width: 20vh;
-    margin-left: 10vh;
+  width: 20vh;
+  margin-left: 10vh;
 }
 
 a {
-    margin: 3vh;
+  margin: 3vh;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    background-color: var(--neonMagenta);
-    color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  background-color: var(--neonMagenta);
+  color: var(--white);
 }
 
 .footer {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    background-color: var(--neonMagenta);
-    color: var(--white);
-    margin-top: 10px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  background-color: var(--neonMagenta);
+  color: var(--white);
+  margin-top: 10px;
 }
