@@ -4,3 +4,6 @@
 //   $("#nameofList").sortable({ connectWith: ["#fruits", "#other"] });
 //   $("#nameofList").sortable({ connectWith: ["#fruits", "#vegetables"] });
 // });
+//known
+//unknown
+//neutral
