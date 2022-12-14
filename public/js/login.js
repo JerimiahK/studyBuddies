@@ -9,16 +9,17 @@ const loginFormHandler = async (event) => {
   console.log(password);
 
   if (email && password) {
-    const response = await $.ajax({
-      url: "http://localhost:3001/api/users/login",
-      //   url: "/api/users/login",
+    const response = await fetch("/api/users/login", {
+      // url: "http://localhost:3001/api/users/login",
+      // url: "/api/users/login",
       method: "POST",
-      body: { email, password },
-      dataType: "JSON",
-      contentType: "application/JSON",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
+      // dataType: "json",
+      // contentType: "application/JSON",
     });
     if (response.ok) {
-      document.location.replace("/home");
+      document.location.replace("/");
     } else {
       console.log(response.statusText);
     }
