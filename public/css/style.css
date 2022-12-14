@@ -80,8 +80,8 @@
 }
 #logo {
   display: flex;
-  max-width: 12vh;
-  max-height: 10vh;
+  width: 5.5rem;
+  height: 4.5rem;
   padding: 1.5vh;
 }
 .btn-favorites {
@@ -125,4 +125,15 @@ main {
 
 .cardHeader {
   color: var(--neonMagenta);
+}
+
+@media only screen and (max-width: 768px) {
+  .card-body {
+    max-width: 100%;
+    margin-inline: 5%
+  }
+
+  main {
+    margin-block: 4%;
+  }
 }
