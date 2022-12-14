@@ -14,6 +14,7 @@
 
 .body {
   background-color: var(--dark);
+  position: relative;
 }
 
 .header {
@@ -125,6 +126,21 @@ main {
 
 .cardHeader {
   color: var(--neonMagenta);
+}
+
+.carousel{
+  position: absolute;
+  opacity: 60%;
+  filter: blur(2px);
+
+}
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+}
+#footlogo {
+  max-height: 5vh;
+  max-width: 5vh;
 }
 
 @media only screen and (max-width: 768px) {
