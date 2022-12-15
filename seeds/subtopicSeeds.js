@@ -2,6 +2,7 @@ const Subtopics = require("../models/Subtopics");
 
 const subtopicData = [
   //Variables
+
   {
     subtopic_name: "variables",
     description:
