@@ -1,9 +1,20 @@
-$(document).ready(() => {
+$(document).ready((e) => {
   // Setting list as sortable items
   $("#unknown").sortable({ connectWith: ["#neutral", "#known"] });
   $("#neutral").sortable({ connectWith: ["#unknown", "#known"] });
   $("#known").sortable({ connectWith: ["#unknown", "#neutral"] });
+  // const currentId = e.currentId;
+  // statusCheck(currentId);
 });
+
+$("#neutral").on("sortreceive", (event, ui) => {
+  console.log(event);
+  console.log("test");
+});
+// const statusCheck = (currentId) => {
+//   console.log(currentId);
+// };
+
 //known
 //unknown
 //neutral
