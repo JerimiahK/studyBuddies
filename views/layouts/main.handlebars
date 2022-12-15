@@ -21,12 +21,17 @@
           <ul class="dropdown-menu">
             {{#if loggedIn}}
             <li>
+              <a class="dropdown-item" href="http://localhost:3001/">Home</a>
+            </li>
+            <li>
               <button id="logoutBtn">
                 <a class="dropdown-item" href="http://localhost:3001/">Logout</a>
               </button>
             </li>
             {{else}}
-            <a href="http://localhost:3001/api/users/login">login</a>
+            <li>
+              <a href="http://localhost:3001/api/users/login">login</a>
+            </li>
             {{/if}}
           </ul>
         </div>
@@ -46,6 +51,7 @@
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/signup.js"></script>
     <script src="/js/logout.js"></script>
+    <script src="/js/topic-cardClick.js"></script>
   </body>
   <footer class="footer">
     <div>About</div>
