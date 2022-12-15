@@ -1,22 +1,19 @@
 <div class="container text-center">
     <div class="row p-3">
-        <div class="col border border-dark m-1" id="unknown">
+        <div class="col border border-dark m-1"  id="unknown">
             <p>Things I Don't Know</p>
                 {{#each subtopics as |subtopic| }}
                 {{#if (sortStatus status 1) }}
                 {{> subtopic-cards}}
-           
                 {{/if}}
                 {{/each}}
         </div>
-        <div class="col border border-dark m-1" id="neutral">
+        <div class="col border border-dark m-1" id="neutral" >
             <p>Neutral</p>
                 {{#each subtopics as |subtopic| }}
                 {{#if (sortStatus status 2) }}
                 {{> subtopic-cards}}
-           
                 {{/if}}
-
                 {{/each}}
         </div>
         <div class="col border border-dark m-1" id="known">
@@ -24,7 +21,6 @@
                 {{#each subtopics as |subtopic| }}
                 {{#if (sortStatus status 3) }}
                 {{> subtopic-cards}}
-           
                 {{/if}}
                 {{/each}}
         </div>

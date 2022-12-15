@@ -20,18 +20,18 @@
           </button>
           <ul class="dropdown-menu">
             {{#if loggedIn}}
-            <li>
-              <a class="dropdown-item" href="http://localhost:3001/">Home</a>
-            </li>
-            <li>
-              <button id="logoutBtn">
-                <a class="dropdown-item" href="http://localhost:3001/">Logout</a>
-              </button>
-            </li>
+              <li>
+                <a class="dropdown-item" href="http://localhost:3001/">Home</a>
+              </li>
+              <li>
+                <button id="logoutBtn">
+                  <a class="dropdown-item" href="http://localhost:3001/">Logout</a>
+                </button>
+              </li>
             {{else}}
-            <li>
-              <a href="http://localhost:3001/api/users/login">login</a>
-            </li>
+              <li>
+                <a href="http://localhost:3001/api/users/login">login</a>
+              </li>
             {{/if}}
           </ul>
         </div>
@@ -45,13 +45,31 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    {{! <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
       integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script> }}
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.js"
+      integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
     <script src="/js/signup.js"></script>
     <script src="/js/logout.js"></script>
-    <script src="/js/topic-cardClick.js"></script>
+    <script src="/js/sortable.js"></script>
+
   </body>
   <footer class="footer">
     <div></div>
