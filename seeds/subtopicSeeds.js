@@ -21,6 +21,7 @@ const subtopicData = [
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const",
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let",
     ],
+    // topic_id: 1,
   },
   // Arrays
   {
@@ -40,7 +41,7 @@ const subtopicData = [
       "https://www.simplilearn.com/tutorials/javascript-tutorial/javascript-arrays",
       "https://www.freecodecamp.org/news/tag/arrays/",
     ],
-    // topic_id : , ??
+    topic_id: 1,
   },
   //For Loops
   {
@@ -57,7 +58,7 @@ const subtopicData = [
       "https://www.w3schools.com/js/js_loop_for.asp",
       "https://www.freecodecamp.org/news/javascript-for-loops/",
     ],
-    // topic_id : , ??
+    topic_id: 1,
   },
   //Functions
   {
@@ -74,7 +75,7 @@ const subtopicData = [
       "https://www.w3schools.com/js/js_loop_for.asp",
       "https://www.freecodecamp.org/news/javascript-for-loops/",
     ],
-    // topic_id : , ??
+    topic_id: 1,
   },
   //Css Selectors
   {
@@ -90,7 +91,7 @@ const subtopicData = [
       "https://www.w3schools.com/cssref/css_selectors.php",
       "https://css-tricks.com/almanac/selectors/",
     ],
-    // topic_id : , ??
+    topic_id: 2,
   },
   //Css Color
   {
@@ -106,7 +107,7 @@ const subtopicData = [
       "https://www.w3schools.com/cssref/css_colors_legal.php",
       "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
     ],
-    // topic_id : , ??
+    topic_id: 2,
   },
   //Css Positioning
   {
@@ -122,7 +123,7 @@ const subtopicData = [
       "https://developer.mozilla.org/en-US/docs/Web/CSS/position",
       "https://css-tricks.com/almanac/properties/p/position/",
     ],
-    // topic_id : , ??
+    topic_id: 2,
   },
   //Css Flexbox
   {
@@ -138,7 +139,7 @@ const subtopicData = [
       "https://www.w3schools.com/css/css3_flexbox.asp",
       "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox",
     ],
-    // topic_id : , ??
+    topic_id: 2,
   },
   //Dom Traversal
   {
@@ -148,7 +149,7 @@ const subtopicData = [
     code_examples: [""],
     demo_code: "This is where code demos will go for the subtopic",
     resources: ["", "", ""],
-    // topic_id : , ??
+    topic_id: 1,
   },
   //Creating Elements
   {
@@ -158,7 +159,7 @@ const subtopicData = [
     code_examples: [""],
     demo_code: "This is where code demos will go for the subtopic",
     resources: ["", "", ""],
-    // topic_id : , ??
+    topic_id: 1,
   },
   //Event listeners
   {
@@ -168,7 +169,7 @@ const subtopicData = [
     code_examples: [""],
     demo_code: "This is where code demos will go for the subtopic",
     resources: ["", "", ""],
-    // topic_id : , ??
+    topic_id: 1,
   },
   //Local Storage
   {
@@ -180,6 +181,7 @@ const subtopicData = [
     ],
     demo_code: "This is where code demos will go for the subtopic",
     resources: "This is where any resources (links, docs, etc) with go for the subtopic.",
+    topic_id: 1,
   },
 ];
 

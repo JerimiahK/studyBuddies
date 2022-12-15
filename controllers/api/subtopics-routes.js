@@ -14,7 +14,45 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+// /:topic_id
+// where: {topic_id : res.params.id},
+// attributes: ["topic_id"],
+// topic_id: res.topic_id,
 
+//How can we search our database to find all subtopics with a topic_id that matches the card being clicked on???
+
+router.get("/:topic_id", async (req, res) => {
+  try {
+    const subtopicsData = await Subtopics.findAll({
+      include: [
+        {
+          model: Topics,
+        },
+      ],
+    });
+    res.status(200).json(subtopicsData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// router.get("/:id", async (req, res) => {
+//   try {
+//     console.log(req);
+//     const subtopicsData = await Subtopics.findByPk(req.params.id, {
+//       include: [{ model: Topics }],
+//     });
+
+//     const subtopics = subtopicsData.get({ plain: true });
+//     res.render("subtopic", {
+//       subtopics,
+//       loggedIn: req.session.loggedIn,
+//       // topic_name :
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 // http:localhost:3001/api/subtopics/:id
 //POST
 router.post("/", async (req, res) => {
@@ -40,9 +78,7 @@ router.put("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    return !subtopicsData
-      ? res.status(404).json({ message: "No subtopic found with that id!" })
-      : res.status(200).json(subtopicsData);
+    return !subtopicsData ? res.status(404).json({ message: "No subtopic found with that id!" }) : res.status(200).json(subtopicsData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -57,9 +93,7 @@ router.delete("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    return !subtopicsData
-      ? res.status(404).json({ message: "No subtopic found with that id!" })
-      : res.status(200).json(subtopicsData);
+    return !subtopicsData ? res.status(404).json({ message: "No subtopic found with that id!" }) : res.status(200).json(subtopicsData);
   } catch (err) {
     res.status(500).json(err);
   }
