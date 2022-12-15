@@ -56,7 +56,6 @@
 .footer {
   display: flex;
   opacity: 90%;
-  font-family: cursive;
   font-weight: bolder;
   position: fixed;
   bottom: 0px;
@@ -65,6 +64,7 @@
   align-content: center;
   justify-content: space-between;
   background-color: var(--darker);
+  font-family: "Pacifico", "Arial Narrow", Arial, sans-serif;
   color: var(--neonBlue);
   margin-top: 10px;
 }

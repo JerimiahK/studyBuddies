@@ -1,17 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 :root {
-    --neonMagenta: rgb(177, 35, 177);
-    --neonYellow: rgb(255, 255, 115);
-    --neonBlue: rgb(35, 249, 231);
-    --neonPurple: rgb(170, 26, 183);
-    --white: white;
-    --black: --black;
-    --dark: rgb(43, 42, 42);
+  --neonMagenta: rgb(203, 108, 230);
+  --neonRed: rgb(240, 22, 80);
+  --neonYellow: rgb(255, 255, 115);
+  --neonBlue: rgb(92, 225, 230);
+  --neonPurple: rgb(170, 26, 183);
+  --white: white;
+  --dark: rgb(55, 52, 52);
+  --darker: rgba(0, 0, 0, 0.5)
+}
+
+.header {
+    display: flex;
+    opacity: 90%;
+    z-index: 500;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    background-color: var(--darker);
+    font-family: "Pacifico", "Arial Narrow", Arial, sans-serif;
+    color: var(--neonBlue);
+    position: sticky;
+    top: 0px;
+  }
+  .headings{
+   display: flex;
+   padding-right: 450px;
   }
 
 .body {
     background-color: var(--dark);
 }
-
+#logo {
+    display: flex;
+    width: 4.2rem;
+    height: 3.3rem;
+    padding: 1.5vh;
+  }
 .sign-up-page {
     display: flex;
     flex-direction: column;
@@ -40,14 +67,7 @@ a {
     margin: 3vh;
 }
 
-.header {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    background-color: var(--neonMagenta);
-    color: var(--white);
-}
+
 
 .footer {
     position: fixed;
@@ -57,7 +77,8 @@ a {
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
-    background-color: var(--neonMagenta);
-    color: var(--white);
+    background-color: var(--darker);
+    font-family: "Pacifico", "Arial Narrow", Arial, sans-serif;
+    color: var(--neonBlue);
     margin-top: 10px;
 }
