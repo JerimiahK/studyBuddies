@@ -9,16 +9,8 @@ router.get("/", async (req, res) => {
     const subtopicsData = await Subtopics.findAll({
       include: [{ model: Topics }],
     });
-
-    // const subtopics = subtopicsData.map((subtopic) => subtopic.get({ plain: true }));
     res.status(200).json(subtopicsData);
-
-    // Renders the subtopic.handlebars
-    // res.render("subtopics", {
-    //   subtopic,
-    // });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -48,7 +40,9 @@ router.put("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    return !subtopicsData ? res.status(404).json({ message: "No subtopic found with that id!" }) : res.status(200).json(subtopicsData);
+    return !subtopicsData
+      ? res.status(404).json({ message: "No subtopic found with that id!" })
+      : res.status(200).json(subtopicsData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -63,7 +57,9 @@ router.delete("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    return !subtopicsData ? res.status(404).json({ message: "No subtopic found with that id!" }) : res.status(200).json(subtopicsData);
+    return !subtopicsData
+      ? res.status(404).json({ message: "No subtopic found with that id!" })
+      : res.status(200).json(subtopicsData);
   } catch (err) {
     res.status(500).json(err);
   }
