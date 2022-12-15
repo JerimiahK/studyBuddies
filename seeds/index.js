@@ -20,10 +20,10 @@ const seedCategory = require("./categorySeeds.js");
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await seedUsers();
   await seedCategory();
   await seedTopics();
   await seedSubtopic();
+  await seedUsers();
 
   process.exit(0);
 };

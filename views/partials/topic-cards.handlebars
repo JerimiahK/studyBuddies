@@ -1,11 +1,12 @@
-<div class="card-body homepageCard {{topic_name}}" id="{{id}}">
-  <div class="cardHeader">
-    <h5 class="card-title">{{topic_name}}</h5>
-    <button class="btn btn-favorites">
-      <a href="http://localhost:3001/subtopics/"></a>
-      <i class="bi bi-star"></i>
-    </button>
+<a href="/api/subtopics?id={{id}}">
+  <div class="card-body homepageCard {{topic_name}}" id="{{id}}">
+    <div class="cardHeader">
+      <h5 class="card-title">{{topic_name}}</h5>
+      <button class="btn btn-favorites">
+        <i class="bi bi-star"></i>
+      </button>
+    </div>
+    <p class="card-text">{{topic_description}}
+    </p>
   </div>
-  <p class="card-text">{{topic_description}}
-  </p>
-</div>
+</a>

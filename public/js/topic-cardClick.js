@@ -1,17 +1,21 @@
+//currentTarget.id = :topic_id
+// =${e.currentTarget.id}
 const newSubtopicPage = async (e) => {
-  const response = await fetch("/api/subtopics/:topic_id", {
+  const response = await fetch(`/api/subtopics?id=${e.currentTarget.id}`, {
     method: "GET",
     headers: { "Content-Type": "application/json" },
   });
   if (response.ok) {
+    const subtopicData = await response.json();
     //if response.ok we should be sent to the subtopics page.
     //the subtopic page should have all the topics related to the the topic_id = ex. javascript
     document.location.replace(`api/subtopics/`);
+    console.log(subtopicData);
   } else {
     alert(response.statusText);
   }
 };
-$(".homepageCard").on("click", newSubtopicPage);
+// $(".homepageCard").on("click", newSubtopicPage);
 
 // WHEN a user clicks on a card -> hit our api -> get subtopic category by id
 // THEN that card will take them to the corresponding subtopics page with : name, description ....

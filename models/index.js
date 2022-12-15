@@ -1,6 +1,8 @@
 const Categories = require("./Categories");
 const Topics = require("./Topics");
 const Subtopics = require("./Subtopics");
+const SubtopicStatus = require("./subtopicStatus");
+const Users = require("./User");
 
 // Categories has many Topics via the 'category_id' foreign key.
 Categories.hasMany(Topics, {
@@ -22,8 +24,22 @@ Subtopics.belongsTo(Topics, {
   foreignKey: "topic_id",
 });
 
+// many to many between subtopics and users
+Subtopics.belongsToMany(Users, {
+  through: SubtopicStatus,
+  foreignKey: "subtopic_id",
+});
+
+
+
+Users.belongsToMany(Subtopics, {
+  through: SubtopicStatus,
+  foreignKey: "user_id",
+});
 module.exports = {
   Categories,
   Topics,
   Subtopics,
+  Users,
+  SubtopicStatus,
 };
