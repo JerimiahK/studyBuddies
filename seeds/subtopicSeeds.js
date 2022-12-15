@@ -149,7 +149,7 @@ const subtopicData = [
     code_examples: [""],
     demo_code: "This is where code demos will go for the subtopic",
     resources: ["", "", ""],
-    topic_id: 1,
+    topic_id: 3,
   },
   //Creating Elements
   {
@@ -159,7 +159,7 @@ const subtopicData = [
     code_examples: [""],
     demo_code: "This is where code demos will go for the subtopic",
     resources: ["", "", ""],
-    topic_id: 1,
+    topic_id: 3,
   },
   //Event listeners
   {
@@ -169,7 +169,7 @@ const subtopicData = [
     code_examples: [""],
     demo_code: "This is where code demos will go for the subtopic",
     resources: ["", "", ""],
-    topic_id: 1,
+    topic_id: 3,
   },
   //Local Storage
   {
@@ -180,8 +180,9 @@ const subtopicData = [
       "var myString = “Hello world!”;localStorage.setItem(message, myString); Local storage will now read: message | “Hello world!” The message key is now paired with the “Hello world!” string var myStorage = localStorage.getItem(message);console.log(message); Console log://Hello world!",
     ],
     demo_code: "This is where code demos will go for the subtopic",
-    resources: "This is where any resources (links, docs, etc) with go for the subtopic.",
-    topic_id: 1,
+    resources:
+      "This is where any resources (links, docs, etc) with go for the subtopic.",
+    topic_id: 3,
   },
 ];
 
