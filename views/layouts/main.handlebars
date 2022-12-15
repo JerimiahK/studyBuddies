@@ -12,7 +12,9 @@
   <body class="body">
     <div class="flex-column justify-space-around">
       <header class="header">
+        <a href="/">
         <img id="logo" src="/assets/STUDY-BUDDIDES-LOGO.png" alt="" />
+        </a>
         <h1 class="heading">The Study Buddy</h1>
         <div class="dropdown">
           <button class="btn dropbox" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -21,16 +23,13 @@
           <ul class="dropdown-menu">
             {{#if loggedIn}}
               <li>
-                <a class="dropdown-item" href="http://localhost:3001/">Home</a>
+                <a class="dropdown-item" href="/">Home</a>
               </li>
-              <li>
-                <button id="logoutBtn">
-                  <a class="dropdown-item" href="http://localhost:3001/">Logout</a>
-                </button>
+                  <a class="dropdown-item" href="/" id="logoutBtn">Logout</a>
               </li>
             {{else}}
               <li>
-                <a href="http://localhost:3001/api/users/login">login</a>
+                <a href="/api/users/login">login</a>
               </li>
             {{/if}}
           </ul>
