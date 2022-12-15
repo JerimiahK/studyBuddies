@@ -1,0 +1,21 @@
+
+<div class="container container-fluid mt-5">
+    <div class="container">
+        <div class="row p-3">
+            <div class="col border border-dark m-1" id="div1">
+                <div class="card m-1" style="width: 100%">
+                    <div class="card-body">
+                        <h3 class="description">{{subtopic_name}}</h3>
+                        <p class="card-text">{{description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>Code examples</h3>
+        <div class="row border border-dark m-1 text-center">
+            {{#each subtopics as |subtopic| }}
+            {{> subtopicDetails-cards}}
+            {{/each}}
+        </div>
+    </div>
+</div>
