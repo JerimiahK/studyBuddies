@@ -23,9 +23,8 @@ router.get("/", async (req, res) => {
 // http://localhost:3001/api/user/login
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect("/");
-    return;
   }
 
   res.render("login");
@@ -35,7 +34,7 @@ router.get("/login", (req, res) => {
 // http://localhost:3001/api/user/sign-up
 router.get("/sign-up", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect("/");
     return;
   }
@@ -44,21 +43,17 @@ router.get("/sign-up", (req, res) => {
 });
 
 // Create New User
+// http://localhost:3001/api/users
 router.post("/", async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
 
       res.status(200).json(userData);
     });
-
-    req.session.save(() => {
-      req.session.loggedIn = true;
-    });
-    res.status(200).json(newUser);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -93,10 +88,6 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      console.log(
-        "🚀 ~ file: user-routes.js ~ line 65 ~ req.session.save ~ req.session.cookie",
-        req.session.cookie
-      );
 
       res
         .status(200)

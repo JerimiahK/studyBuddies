@@ -4,9 +4,6 @@ const signupFormHandler = async (event) => {
   const user_name = $("#user-name").val();
   const email = $("#email-address").val();
   const password = $("#password").val();
-  console.log(user_name);
-  console.log(email);
-  console.log(password);
 
   if (user_name && email && password) {
     const response = await fetch("/api/users", {

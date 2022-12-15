@@ -12,6 +12,7 @@ router.get("/", async (req, res) => {
     // Renders the homepage.handlebars
     res.render("homepage", {
       topics,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);

@@ -19,10 +19,14 @@
             <i class="bi bi-list-stars" style="font-size: 6vh"></i>
           </button>
           <ul class="dropdown-menu">
-            {{#if logged_in}}
-              <li><a class="dropdown-item" href="http://localhost:3001/" id="logout">Logout</a></li>
+            {{#if loggedIn}}
+            <li>
+              <button id="logoutBtn">
+                <a class="dropdown-item" href="http://localhost:3001/">Logout</a>
+              </button>
+            </li>
             {{else}}
-              <a href="http://localhost:3001/api/users/login">login</a>
+            <a href="http://localhost:3001/api/users/login">login</a>
             {{/if}}
           </ul>
         </div>
@@ -41,6 +45,7 @@
       integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/signup.js"></script>
+    <script src="/js/logout.js"></script>
   </body>
   <footer class="footer">
     <div>About</div>
