@@ -142,6 +142,36 @@ main {
   max-width: 5vh;
 }
 
+
+.subtopic-category{
+  align-content: center;
+  justify-content: space-between;
+  font-family: "Pacifico", "Arial Narrow", Arial, sans-serif;
+  color: var(--neonBlue);
+}
+
+.subtopic-card-body {
+  background-color: var(--darker);
+  color: white;
+  justify-content: space-between;
+  margin: 2%;
+  max-width: 100%;
+  border-radius: 1vh;
+  outline-style: solid;
+  outline-color: var(--neonBlue);
+}
+
+.subtopic-card-body:hover {
+  cursor: pointer;
+  background: rgb(92,225,230);
+  background: linear-gradient(18deg, rgba(92,225,230,1) 16%, rgba(143,171,230,1) 47%, rgba(203,108,230,1) 80%);
+  color: black;
+}
+
+.card-title {
+  color: var(--neonMagenta);
+}
+
 @media only screen and (max-width: 768px) {
   .card-body {
     max-width: 100%;
@@ -152,3 +182,45 @@ main {
     margin-block: 4%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
