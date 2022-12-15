@@ -76,7 +76,10 @@ router.get("/", async (req, res) => {
     // console.log(subtopicData[0].users[0].subtopicStatus);
     console.log(subtopics);
     console.log("=======================");
-    res.status(200).render("subtopic", { subtopics });
+    res.status(200).render("subtopic", {
+      subtopics,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
