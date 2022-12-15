@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const { Users, Subtopics } = require("../models");
 
 const userData = [
   {
@@ -19,8 +19,10 @@ const userData = [
 ];
 
 const seedUsers = async () => {
+  const currentSubtopics = await Subtopics.findAll();
   for (const user of userData) {
-    await User.create(user);
+    const currentUser = await Users.create(user);
+    await currentUser.addSubtopics(currentSubtopics);
   }
 };
 module.exports = seedUsers;
