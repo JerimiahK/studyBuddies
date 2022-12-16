@@ -2,29 +2,6 @@
 const router = require("express").Router();
 const { Subtopics, Topics, SubtopicStatus, Users } = require("../../models/");
 
-// http:localhost:3001/api/subtopics
-//GET
-// router.get("/", async (req, res) => {
-//   try {
-//     const subtopicsData = await Subtopics.findAll({
-//       include: [{ model: Topics }],
-//     });
-//     res.status(200).json(subtopicsData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-// /:topic_id
-// where: {topic_id : res.params.id},
-// attributes: ["topic_id"],
-// where: { topic_id: topic_id },
-// topic_id: res.topic_id,
-
-//How can we search our database to find all subtopics with a topic_id that matches the card being clicked on???
-
-//We have an id from an e.currentTarget, we want to take that ID and query against are database to find all subtopics with a topic_id = to the currentTarget.id
-
 router.get("/", async (req, res) => {
   const topicID = req.query.id;
   // const currentUser = req.session.id;
@@ -43,23 +20,9 @@ router.get("/", async (req, res) => {
           },
         },
       ],
-      // through: {
-      //   attributes: [],
-      // },
-
-      // include: Users,
     });
-    // For subtopics status : id, status,
-    // ["id", "description", "resources", "code_examples", "demo_code"],
     const subtopics = subtopicData.map((subtopic) => {
       const user = subtopic.users[0].subtopicStatus;
-      // return user.subtopicStatus.map(({ id, subtopic_id, status }) => {
-      //   return {
-      //     id,
-      //     subtopic_id,
-      //     status,
-      //   };
-      // });
       return {
         id: subtopic.id,
         status_id: user.id,
@@ -72,10 +35,6 @@ router.get("/", async (req, res) => {
       };
     });
 
-    console.log("=======================");
-    // console.log(subtopicData[0].users[0].subtopicStatus);
-    console.log(subtopics);
-    console.log("=======================");
     res.status(200).render("subtopic", {
       subtopics,
       loggedIn: req.session.loggedIn,
@@ -86,17 +45,12 @@ router.get("/", async (req, res) => {
   }
 });
 
-// This is the route that we will hit when we click on subtopic title cards
 router.get("/:id", async (req, res) => {
   try {
     const subtopicsData = await Subtopics.findByPk(req.params.id);
 
     const subtopics = subtopicsData.get({ plain: true });
-    // res.render("subtopic", {
-    //   subtopics,
-    //   loggedIn: req.session.loggedIn,
-    //   // topic_name :
-    // });
+
     res.render("subtopicDetails", subtopics);
   } catch (err) {
     res.status(500).json(err);
