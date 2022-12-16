@@ -6,6 +6,7 @@ const loginFormHandler = async (event) => {
   //   $.trim(email);
   //   $.trim(password);
 
+
   if (email && password) {
     const response = await fetch("/api/users/login", {
       method: "POST",
