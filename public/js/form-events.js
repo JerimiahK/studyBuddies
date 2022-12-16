@@ -1,17 +1,10 @@
-// add
-//delete
-//edit
-
 // Template literals stored in var
 $("#delete").on("click", (e) => {
-  // console.log(e);
   let targetID = e.target.parentElement.id;
   $(".modal-body").text("");
   $("#modal-title").text("Delete card");
   $("#mymodal").modal("toggle");
   $(".modal-body").prepend(`Are you sure you want to delete this card?`);
-  // if the user clicks on the button of $("#confirm") then hit the route to delete that card by its id
-  // console.log(e.target);
   const deleteTopic = async () => {
     const response = await fetch(`/api/topics/${targetID}`, {
       method: "DELETE",
@@ -72,14 +65,12 @@ $("#add").on("click", () => {
   <textarea id="topic-description" type="text"></textarea></br>
 
   `);
-  // if the user clicks on the button of $("#create") then hit the route to create that card.
-  // console.log(e.target.id);
   $("#topic-description");
   const addTopic = async () => {
     const userData = {
       topic_name: $("#topic-name").val(),
       topic_description: $("#topic-description").val(),
-      topic_id: 1,
+      topic_id: 1, //need to change from static to dynamic
     };
 
     const response = await fetch(`/api/topics/`, {
@@ -97,5 +88,5 @@ $("#add").on("click", () => {
 });
 
 $("#cancel").on("click", () => {
-  console.log("close out");
+  $("#mymodal").modal("hide");
 });

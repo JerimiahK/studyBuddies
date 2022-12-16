@@ -1,6 +1,6 @@
 <div class="card-body" id="{{id}}">
   <a href="/api/subtopics?id={{id}}">
-    <div class="homepageCard {{topic_name}}">
+    <div class="homepageCard {{topic_name}}" id="{{id}}">
       <div class="cardHeader">
         <h5 class="card-title">{{topic_name}}</h5>
         <button class="btn btn-favorites">
@@ -12,5 +12,5 @@
     </div>
   </a>
   <button id="delete">delete</button>
-  <button id="edit">edit</button>
+  {{! <button id="edit">edit</button> }}
 </div>
