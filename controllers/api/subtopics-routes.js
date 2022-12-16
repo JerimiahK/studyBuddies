@@ -3,8 +3,9 @@ const router = require("express").Router();
 const { Subtopics, Topics, SubtopicStatus, Users } = require("../../models/");
 
 router.get("/", async (req, res) => {
-  const topicID = req.query.id;
-  console.log();
+  // const topicID = req.query.id;
+  // console.log();
+  const topicID = 1;
   // const currentUser = req.session.id;
   const userID = req.session.id;
 
