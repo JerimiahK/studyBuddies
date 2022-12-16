@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const User = require("../../models/User");
-// const { json } = require("sequelize");
 
 // http://localhost:3001/api/user
 // Get all Users
@@ -68,7 +67,6 @@ router.post("/login", async (req, res) => {
         email: req.body.email,
       },
     });
-    // console.log(userData);
 
     if (!userData) {
       res
@@ -110,6 +108,3 @@ router.post("/logout", (req, res) => {
 });
 
 module.exports = router;
-
-
-

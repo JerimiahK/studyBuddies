@@ -30,12 +30,12 @@ Subtopics.belongsToMany(Users, {
   foreignKey: "subtopic_id",
 });
 
-
-
+// many to many between users and subtopics
 Users.belongsToMany(Subtopics, {
   through: SubtopicStatus,
   foreignKey: "user_id",
 });
+
 module.exports = {
   Categories,
   Topics,
