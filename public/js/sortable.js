@@ -16,12 +16,17 @@ $("#unknown, #known, #neutral").on("sortreceive", (event, ui) => {
   sortStatus(eCurrent);
 });
 
-const updateSubtopicStatus = () => {
-  //We need to call this function inside our if else statement
-  //We will take in the eCurrent = current target id
-  //update the id of the item being dropped to the current target id -> attr(id, value) to set the id
-  //Update the database??? with changes made????
-};
+$("#unknown, #known, #neutral").on("sortremove", (event, ui) => {
+  console.log(event);
+});
+
+// maybe pass this two params - receive and remove
+// const updateSubtopicStatus = () => {
+//   //We need to call this function inside our if else statement
+//   //We will take in the eCurrent = current target id
+//   //update the id of the item being dropped to the current target id -> attr(id, value) to set the id
+//   //Update the database??? with changes made????
+// };
 // $("#unknown").on("sortreceive", (event, ui) => {
 //   console.log(event);
 //   console.log("unknown");

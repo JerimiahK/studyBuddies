@@ -1,7 +1,10 @@
 {{! Calls the cards subtopic name}}
-<div class="card m-1" style="min-width: 16rem;" id="test">
-  <div class="card-body" style="min-width: 80%; margin-inline: auto;">
-    {{! Calls the subtopic name}}
-    <h5 class="card-title">{{name}}</h5>
+{{! http://localhost:3001/api/subtopics/5 }}
+<a href="/api/subtopics/{{id}}">
+  <div class="card m-1" style="min-width: 16rem;">
+    <div class="card-body" style="min-width: 80%; margin-inline: auto;">
+      {{! Calls the subtopic name}}
+      <h5 class="card-title">{{name}}</h5>
+    </div>
   </div>
-</div>
+</a>
