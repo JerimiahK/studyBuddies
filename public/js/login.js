@@ -5,18 +5,12 @@ const loginFormHandler = async (event) => {
   const password = $("#password").val();
   //   $.trim(email);
   //   $.trim(password);
-  console.log(email);
-  console.log(password);
 
   if (email && password) {
     const response = await fetch("/api/users/login", {
-      // url: "http://localhost:3001/api/users/login",
-      // url: "/api/users/login",
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
-      // dataType: "json",
-      // contentType: "application/JSON",
     });
     if (response.ok) {
       document.location.replace("/");

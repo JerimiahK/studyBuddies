@@ -5,8 +5,6 @@ class Topic extends Model {}
 
 Topic.init(
   {
-    // 1. ID
-    // 2. topic_name -> references
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
