@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
 :root {
   --neonMagenta: rgb(203, 108, 230);
@@ -9,7 +10,8 @@
   --neonPurple: rgb(170, 26, 183);
   --white: white;
   --dark: rgb(55, 52, 52);
-  --darker: rgba(0, 0, 0, 0.5)
+  --darker: rgba(0, 0, 0, 0.5);
+  --background: rgb(67, 63, 63);
 }
 
 .body {
@@ -121,6 +123,9 @@ main {
   border-radius: 1vh;
   outline-style: solid;
   outline-color: var(--neonBlue);
+  text-decoration: none;
+  opacity: 90%;
+  font-family: "Ubuntu";
 }
 
 .cardHeader {
@@ -140,6 +145,16 @@ main {
 #footlogo {
   max-height: 5vh;
   max-width: 5vh;
+}
+
+.subtopic-section {
+  border: solid;
+  border-color: var(--neonMagenta);
+  color: var(--neonBlue);
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "Ubuntu";
+  margin: 1%;
 }
 
 @media only screen and (max-width: 768px) {
