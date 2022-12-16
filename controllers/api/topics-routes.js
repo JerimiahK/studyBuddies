@@ -22,6 +22,7 @@ router.post("/", async (req, res) => {
   try {
     const topicsData = await Topics.create({
       topic_name: req.body.topic_name,
+      topic_description: req.body.topic_description,
       category_id: req.body.category_id,
     });
     res.status(200).json(topicsData);

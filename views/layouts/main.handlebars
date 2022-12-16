@@ -35,7 +35,25 @@
       </div>
     </header>
     <main>
+      <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title"></h5>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="mymodal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveBtn">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
       {{{body}}}
+     <div class="card-container">
+      <button id="add">Add a new topic here</button>
+      </div>
+
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -67,6 +85,8 @@
     <script src="/js/logout.js"></script>
     <script src="/js/sortable.js"></script>
 
+
+    <script src="/js/form-events.js"></script>
   </body>
   <footer class="footer">
     <div></div>
