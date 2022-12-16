@@ -5,10 +5,6 @@ class Category extends Model {}
 
 Category.init(
   {
-    // 1. ID
-    // 2. category_name (ex. Css)
-    // 3. subtopic_name (ex. media quires) -> REFERENCES subtopics
-    // 4. ... anything else??????
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
