@@ -1,16 +1,40 @@
 $(document).ready((e) => {
-  // Setting list as sortable items
   $("#unknown").sortable({ connectWith: ["#neutral", "#known"] });
   $("#neutral").sortable({ connectWith: ["#unknown", "#known"] });
   $("#known").sortable({ connectWith: ["#unknown", "#neutral"] });
-  // const currentId = e.currentId;
-  // statusCheck(currentId);
 });
 
-$("#neutral").on("sortreceive", (event, ui) => {
-  console.log(event);
-  console.log("test");
+// Created event listener to listen for sort-receive events
+$("#unknown, #known, #neutral").on("sortreceive", (event, ui) => {
+  // console.log(event.currentTarget); // target section receiving dropped item
+  // console.log(event.currentTarget.id); // current target id
+  const eCurrent = event.currentTarget.id;
+  function sortStatus() {
+    //             condition 1          value 1              condition 2             value 2           else       value 3
+    return eCurrent === "unknown" ? console.log(eCurrent) : eCurrent === "known" ? console.log(eCurrent) : console.log("neutral");
+  }
+  sortStatus(eCurrent);
 });
+
+$("#unknown, #known, #neutral").on("sortremove", (event, ui) => {
+  console.log(event);
+});
+
+// maybe pass this two params - receive and remove
+// const updateSubtopicStatus = () => {
+//   //We need to call this function inside our if else statement
+//   //We will take in the eCurrent = current target id
+//   //update the id of the item being dropped to the current target id -> attr(id, value) to set the id
+//   //Update the database??? with changes made????
+// };
+// $("#unknown").on("sortreceive", (event, ui) => {
+//   console.log(event);
+//   console.log("unknown");
+// });
+// $("#known").on("sortreceive", (event, ui) => {
+//   console.log(event);
+//   console.log("known");
+// });
 // const statusCheck = (currentId) => {
 //   console.log(currentId);
 // };
