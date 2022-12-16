@@ -17,7 +17,6 @@ Subtopic.init(
     },
     description: {
       type: DataTypes.TEXT("long"),
-      // type: DataTypes.STRING,
       allowNull: false,
     },
     code_examples: {
