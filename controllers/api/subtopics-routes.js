@@ -56,7 +56,10 @@ router.get("/:id", async (req, res) => {
 
     const subtopics = subtopicsData.get({ plain: true });
 
-    res.render("subTopicDetails", subtopics);
+    res.render("subTopicDetails", {
+      subtopics,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
