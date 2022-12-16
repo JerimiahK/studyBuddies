@@ -1,21 +1,58 @@
-
-<div class="container container-fluid mt-5">
-    <div class="container">
-        <div class="row p-3">
-            <div class="col border border-dark m-1" id="div1">
-                <div class="card m-1" style="width: 100%">
-                    <div class="card-body">
-                        <h3 class="description">{{subtopic_name}}</h3>
-                        <p class="card-text">{{description}}</p>
-                    </div>
-                </div>
-            </div>
+{{!-- <div class="container container-fluid mt-5">
+  <div class="container">
+    <div class="row p-3">
+      <div class="col border border-dark m-1" id="div1">
+        <div class="card m-1 max-width:100%" style="width: 30%">
+          <div class="card-body" style="width: 18rem">
+            <h5 class="card-title"></h5>
+            <p class="card-text">{{description}}</p>
+            <p class="card-text">{{code_examples}}</p>
+            <p class="card-text">{{demo_code}}</p>
+            <p class="card-text">{{resources}}</p>
+          </div>
         </div>
-        <h3>Code examples</h3>
-        <div class="row border border-dark m-1 text-center">
+      </div>
+    </div>
+    <h3>Code examples</h3>
+  </div>
+</div> --}}
+
+{{!-- <div class="row border border-dark m-1 text-center">
             {{#each subtopics as |subtopic| }}
             {{> subtopicDetails-cards}}
             {{/each}}
-        </div>
+        </div> --}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 | bg-secondary">
+      <div class="description-container">
+        <h3>{{subtopic_name}}</h3>
+        <p>{{description}}</p>
+      </div>
     </div>
+    <div class="col-12 col-md-6 | bg-primary">
+      <div class="code-examples-container">
+        <h3>Code Example</h3>
+
+        <code> {{code_examples}} </code>
+      </div>
+    </div>
+    <div class="col-12 | bg-info">
+      <div class="code-demo">
+        <h3>Code Demo</h3>
+      </div>
+    </div>
+    <div class="col-12 | bg-danger">
+      <div class="code-demo">
+        <h3>Resources</h3>
+        <ul>
+          {{#each resources as |resource|}}
+            <li><a href="{{resource}}" target="_blank">{{resource}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row"></div>
 </div>

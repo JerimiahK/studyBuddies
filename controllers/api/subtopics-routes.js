@@ -86,23 +86,22 @@ router.get("/", async (req, res) => {
   }
 });
 
-// router.get("/:id", async (req, res) => {
-//   try {
-//     console.log(req);
-//     const subtopicsData = await Subtopics.findByPk(req.params.id, {
-//       include: [{ model: Topics }],
-//     });
+// This is the route that we will hit when we click on subtopic title cards
+router.get("/:id", async (req, res) => {
+  try {
+    const subtopicsData = await Subtopics.findByPk(req.params.id);
 
-//     const subtopics = subtopicsData.get({ plain: true });
-//     res.render("subtopic", {
-//       subtopics,
-//       loggedIn: req.session.loggedIn,
-//       // topic_name :
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    const subtopics = subtopicsData.get({ plain: true });
+    // res.render("subtopic", {
+    //   subtopics,
+    //   loggedIn: req.session.loggedIn,
+    //   // topic_name :
+    // });
+    res.render("subtopicDetails", subtopics);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // http:localhost:3001/api/subtopics/:id
 //POST
 router.post("/", async (req, res) => {
