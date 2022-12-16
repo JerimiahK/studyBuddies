@@ -4,22 +4,15 @@ const { Subtopics, Topics, SubtopicStatus, Users } = require("../../models/");
 
 router.get("/", async (req, res) => {
   // const topicID = req.query.id;
-  // console.log();
   const topicID = 1;
+
   // const currentUser = req.session.id;
   const userID = req.session.id;
 
   try {
     const subtopicData = await Subtopics.findAll({
       where: { topic_id: topicID },
-      attributes: [
-        "id",
-        "description",
-        "resources",
-        "code_examples",
-        "demo_code",
-        "subtopic_name",
-      ],
+      attributes: ["id", "description", "resources", "code_examples", "demo_code", "subtopic_name"],
       include: [
         {
           model: Users,
@@ -29,7 +22,6 @@ router.get("/", async (req, res) => {
         },
       ],
     });
-    console.log(subtopicData);
     const subtopics = subtopicData.map((subtopic) => {
       const user = subtopic.users[0].subtopicStatus;
       return {
@@ -43,7 +35,6 @@ router.get("/", async (req, res) => {
         demo_code: subtopic.demo_code,
       };
     });
-    console.log(subtopics);
     res.status(200).render("subtopic", {
       subtopics,
       loggedIn: req.session.loggedIn,
@@ -90,9 +81,7 @@ router.put("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    return !subtopicsData
-      ? res.status(404).json({ message: "No subtopic found with that id!" })
-      : res.status(200).json(subtopicsData);
+    return !subtopicsData ? res.status(404).json({ message: "No subtopic found with that id!" }) : res.status(200).json(subtopicsData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -107,9 +96,7 @@ router.delete("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    return !subtopicsData
-      ? res.status(404).json({ message: "No subtopic found with that id!" })
-      : res.status(200).json(subtopicsData);
+    return !subtopicsData ? res.status(404).json({ message: "No subtopic found with that id!" }) : res.status(200).json(subtopicsData);
   } catch (err) {
     res.status(500).json(err);
   }
