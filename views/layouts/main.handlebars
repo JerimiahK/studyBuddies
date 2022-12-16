@@ -10,32 +10,30 @@
   </head>
 
   <body class="body">
-    <div class="flex-column justify-space-around">
-      <header class="header">
-        <a href="/">
-        <img id="logo" src="/assets/STUDY-BUDDIDES-LOGO.png" alt="" />
-        </a>
-        <h1 class="heading">The Study Buddy</h1>
-        <div class="dropdown">
-          <button class="btn dropbox" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-list-stars" style="font-size: 6vh"></i>
-          </button>
-          <ul class="dropdown-menu">
-            {{#if loggedIn}}
-              <li>
-                <a class="dropdown-item" href="/">Home</a>
-              </li>
-                  <a class="dropdown-item" href="/" id="logoutBtn">Logout</a>
-              </li>
-            {{else}}
-              <li>
-                <a href="/api/users/login">login</a>
-              </li>
-            {{/if}}
-          </ul>
-        </div>
-      </header>
-    </div>
+    <header class="header">
+      <a href="/">
+      <img id="logo" src="/assets/STUDY-BUDDIDES-LOGO.png" alt="" />
+      </a>
+      <h1 class="heading">The Study Buddy</h1>
+      <div class="dropdown">
+        <button class="btn dropbox" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-list-stars" style="font-size: 6vh"></i>
+        </button>
+        <ul class="dropdown-menu">
+          {{#if loggedIn}}
+            <li>
+              <a class="dropdown-item" href="/">Home</a>
+            </li>
+                <a class="dropdown-item" href="/" id="logoutBtn">Logout</a>
+            </li>
+          {{else}}
+            <li>
+              <a href="/api/users/login">login</a>
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+    </header>
     <main>
       {{{body}}}
     </main>
