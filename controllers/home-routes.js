@@ -19,27 +19,5 @@ router.get("/", async (req, res) => {
   }
 });
 
-// router.get("/subtopics", async (req, res) => {
-//   try {
-//     const subtopicsData = await Subtopics.findAll({
-//       include: [{ model: Topics }],
-//     });
-//     const subtopics = subtopicsData.map((subtopic) => {
-//       subtopic.get({
-//         plain: true,
-//       });
-//       console.log(subtopic);
-//     });
-//     res.render("subtopic", {
-//       subtopics,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-// module.exports = router;
-
-//// http:localhost:3001/subtopics
 
 module.exports = router;
