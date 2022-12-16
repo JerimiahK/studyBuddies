@@ -154,6 +154,46 @@ main {
   margin: 1%;
 }
 
+.details-container{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Ubuntu";
+  margin-top: 5vh;
+  color: white;
+}
+
+.description-examples {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.details-container h3 {
+  color: var(--neonBlue);
+}
+
+.description-card {
+  max-width: 42.5%;
+}
+
+.examples-card {
+  max-width: 42.5%;
+}
+
+.resources-card {
+  min-width: 85%;
+}
+
+.card-style {
+  border: solid;
+  border-color: var(--neonMagenta);
+  padding: 2.5vh;
+  margin: 1%;
+}
+
 @media only screen and (max-width: 768px) {
   .card-body {
     max-width: 100%;
