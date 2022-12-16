@@ -4,9 +4,8 @@ const { Subtopics, Topics, SubtopicStatus, Users } = require("../../models/");
 
 router.get("/", async (req, res) => {
   const topicID = req.query.id;
-  // const currentUser = req.session.id;
+  // const userID = req.session.id;
   const userID = 1;
-  // console.log(req.session.id);
 
   try {
     const subtopicData = await Subtopics.findAll({
