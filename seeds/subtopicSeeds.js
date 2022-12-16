@@ -146,7 +146,9 @@ const subtopicData = [
     subtopic_name: "dom traversal",
     description:
       "DOM stands for Document Object Model. In HTML, all elements are stored in the document object, to access these elements in JavaScript, we must use DOM Traversal. We can do this by using methods on the document object. If we want to access the body of an HTML document we use document.body which will return all of the HTML contained in the body of the document (see example A). We can then access elements contained in the body by using document.body.children[<index>] with the index being the given element we want to access (see example B). This process can become tedious, but JavaScript has built in functions to access specific elements, such as: document.getElementById(<elementId>) to access an element based on its unique ID or document.getElementsByClass(<elementClassName>) to access elements with a given class name (see example C).",
-    code_examples: [""],
+    code_examples: [
+      "HTML:<!DOCTYPE html><html lang=”en”><head><meta charset=”UTF-8”><title>Creating Elements</title></head><body><h1>DOM Traversal</h1><ul id= “list”><li>Child0</li><li>Child1</li><li>Child2</liul><body><html>JavaScript://Creates new list item elementvar newElement = document.createElement(“li”);//Adds text content to list itemnewElement.textContent = “Child 3”;//Grabs unordered lielementvarlist =document.getElementById(“list”);//Appends new list item to unordered listlist.appendChild(newElement);New HTML:<!DOCTYPE html><html lang=”en”><head><meta charset=”UTF><title>CreatingElements</title><head><body><h1>DOM Traversal</h1><ul id= “list”><li>Child0</li><li>Child1</li><li>Child2</li><li>Child3</li></ul></body></html>",
+    ],
     demo_code: "This is where code demos will go for the subtopic",
     resources: [
       "https://www.w3schools.com/js/js_htmldom_navigation.asp",
@@ -169,15 +171,9 @@ const subtopicData = [
     subtopic_name: "event listeners",
     description:
       "Event listeners are used to track user activity and execute code once a user triggers the event. Event listeners attach event handlers to specific HTML elements using <element>.addEventListener(<event>, <function> {<code>}). One of the most common events a developer will handle is a “click” event. Click events often occur on buttons. When a button element is clicked that has an event listener attached to it, it will execute the code in the function parameter.",
-    code_examples: ["HTML:
-<!DOCTYPE html><html lang=”en”><head><meta charset=”UTF-8”><title>Creating Elements</title></head>
-<body><h1>Event Listeners</h1><button id=btn>Click me!</button></body></html>JavaScript:
-var button = document.getElementById(“btn”);
-//When the user clicks the button they will receive a pop-up alert reading “Success!”
-button.addEventListener(“click”, function() {
-alert(“Success!”);
-});
-"],
+    code_examples: [
+      "HTML:<!DOCTYPE html><html lang=”en”><head><meta charset=”UTF-8”><title>Creating Elements</title></head><body><h1>Event Listeners</h1><button id=btn>Click me!</button></body></html>JavaScript:var button = document.getElementById(“btn”);//When the user clicks the button they will receive a pop-up alert reading “Success!”button.addEventListener(“click”, function() {alert(“Success!”);});",
+    ],
     demo_code: "This is where code demos will go for the subtopic",
     resources: [
       "https://www.w3schools.com/js/js_htmldom_eventlistener.asp",
