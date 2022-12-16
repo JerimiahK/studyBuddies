@@ -49,7 +49,7 @@ router.get("/:id", async (req, res) => {
 
     const subtopics = subtopicsData.get({ plain: true });
 
-    res.render("subtopicDetails", subtopics);
+    res.render("subTopicDetails", subtopics);
   } catch (err) {
     res.status(500).json(err);
   }
