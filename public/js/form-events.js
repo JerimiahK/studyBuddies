@@ -1,5 +1,6 @@
 // Template literals stored in var
 $("#delete").on("click", (e) => {
+  console.log("test");
   let targetID = e.target.parentElement.id;
   $(".modal-body").text("");
   $("#modal-title").text("Delete card");
