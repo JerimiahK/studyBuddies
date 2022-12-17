@@ -15,6 +15,7 @@
 }
 a {
   text-decoration: none;
+  color: #000;
 }
 .body {
   background-color: rgb(67, 63, 63);
@@ -38,8 +39,8 @@ a {
 
 .dropbox {
   display: flex;
-  color: var(--neonBlue) ;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--neonBlue);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5rem;
   margin-top: 2vh;
   padding-top: 2vh;
@@ -48,8 +49,8 @@ a {
 .dropbox:hover {
   cursor: pointer;
   height: 87%;
-  background: rgb(92,225,230);
-  background: linear-gradient(18deg, rgba(92,225,230,1) 16%, rgba(143,171,230,1) 47%, rgba(203,108,230,1) 80%);
+  background: rgb(92, 225, 230);
+  background: linear-gradient(18deg, rgba(92, 225, 230, 1) 16%, rgba(143, 171, 230, 1) 47%, rgba(203, 108, 230, 1) 80%);
   color: var(--dark);
 }
 
@@ -154,8 +155,8 @@ main {
   margin: 1%;
 }
 
-.details-container{
-  display:flex;
+.details-container {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -203,4 +204,14 @@ main {
   main {
     margin-block: 4%;
   }
+}
+
+#delete,
+#add {
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }

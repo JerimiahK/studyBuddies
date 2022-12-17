@@ -10,14 +10,7 @@ router.get("/", async (req, res) => {
   try {
     const subtopicData = await Subtopics.findAll({
       where: { topic_id: topicID },
-      attributes: [
-        "id",
-        "description",
-        "resources",
-        "code_examples",
-        "demo_code",
-        "subtopic_name",
-      ],
+      attributes: ["id", "description", "resources", "code_examples", "demo_code", "subtopic_name"],
       include: [
         {
           model: Users,
@@ -85,9 +78,7 @@ router.put("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    return !subtopicsData
-      ? res.status(404).json({ message: "No subtopic found with that id!" })
-      : res.status(200).json(subtopicsData);
+    return !subtopicsData ? res.status(404).json({ message: "No subtopic found with that id!" }) : res.status(200).json(subtopicsData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -102,9 +93,7 @@ router.delete("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    return !subtopicsData
-      ? res.status(404).json({ message: "No subtopic found with that id!" })
-      : res.status(200).json(subtopicsData);
+    return !subtopicsData ? res.status(404).json({ message: "No subtopic found with that id!" }) : res.status(200).json(subtopicsData);
   } catch (err) {
     res.status(500).json(err);
   }

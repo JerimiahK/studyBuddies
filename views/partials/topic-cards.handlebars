@@ -1,12 +1,16 @@
-<a href="/api/subtopics?id={{id}}" class="card-body">
-  <div class="homepageCard {{topic_name}}" id="{{id}}">
-    <div class="cardHeader">
-      <h5 class="card-title">{{topic_name}}</h5>
-      <button class="btn btn-favorites">
-        <i class="bi bi-star"></i>
-      </button>
+<div class="card-body" id="{{id}}">
+  <a href="/api/subtopics?id={{id}}">
+    <div class="homepageCard {{topic_name}}" id="{{id}}">
+      <div class="cardHeader">
+        <h5 class="card-title">{{topic_name}}</h5>
+        <button class="btn btn-favorites">
+          <i class="bi bi-star"></i>
+        </button>
+      </div>
+      <p class="card-text text-light">{{topic_description}}
+      </p>
     </div>
-    <p class="card-text">{{topic_description}}
-    </p>
-  </div>
-</a>
+  </a>
+  {{! <button id="delete">delete</button> }}
+  {{! <button id="edit">edit</button> }}
+</div>
