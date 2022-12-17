@@ -48,11 +48,7 @@ router.get("/:id", async (req, res) => {
     const subtopicsData = await Subtopics.findByPk(req.params.id);
 
     const subtopics = subtopicsData.get({ plain: true });
-
-    res.render("subTopicDetails", {
-      subtopics,
-      loggedIn: req.session.loggedIn,
-    });
+    res.render("subTopicDetails", subtopics);
   } catch (err) {
     res.status(500).json(err);
   }
